@@ -11,10 +11,10 @@
   
 ## 3. Scalar functions
 - Difference between Tabular Functions and Scalar Functions in Power BI [-> Read this](https://radacad.com/power-bi-dax-back-to-basics-scalar-vs-tabular-functions)
-- Difference between `CALCULATE` with `FILTER` and without `FILTER` [-> Read this](https://community.powerbi.com/t5/Desktop/DAX-Calculate-function-with-and-without-FILTER/m-p/679222)  
-  + `CALCULATE` with `FILTER` only shows values that are the same as the selection made by users, other cells will remain `BLANK`
-  + When comparing column value > column value; column value > measure; measure > measure
-  + When filter has the `OR` condition 
+- Difference between `CALCULATE` with `FILTER` and without `FILTER` [-> Read this](https://community.powerbi.com/t5/Desktop/DAX-Calculate-function-with-and-without-FILTER/m-p/679222). We use `CALCULATE` with `FILTER` when:
+  + We want to shows only values that are the same as the filter(s), other cells will remain `BLANK`
+  + We compare column value > column value; column value > measure; measure > measure
+  + The filter has the `OR` condition 
 - Why we should always use `FILTER` in `CALCULATE` function? [-> Read this](https://blog.enterprisedna.co/how-to-use-simple-filters-in-power-bi)
 
 ## 4. Aggregation functions
