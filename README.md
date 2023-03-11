@@ -36,6 +36,8 @@
 - `REMOVEFILTERS` is an alias for `ALL`, but can only be used as a `CALCULATE` modifier (not as a table function). 
   + Differences between `REMOVEFILTERS` and `ALL` [->Read this](https://www.sqlbi.com/articles/managing-all-functions-in-dax-all-allselected-allnoblankrow-allexcept)
 - `KEEPFILTERS` does not remove an existing column or table filter for an individual `CALCULATE` expression, but adds new filter context (like Inner Join)
+  + `KEEPFILTERS`: only show the value where the initial filter context is the same
+  + `CALCULATE` filter: always show the value regardless of any selected filter
 
 ## 6. Table & Filter functions
 - Return columns or tables rather than scalar values, and can be used to either generate new data or serve as table inputs within DAX measures.
