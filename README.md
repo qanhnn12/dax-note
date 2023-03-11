@@ -38,7 +38,7 @@
   + `REMOVEFILTERS` is just an alias of `ALL`, it works just the same. Basically, `ALL` returns a table including all rows, ignoring any filters that might have been applied. However, when `ALL` is used as a filter argument of `CALCULATE` or `CALCULATETABLE`, it behave totally differently: it removes filters from the table and does not return a table. To alleviate this confusing behavior of `ALL`, `REMOVEFILTERS` was introduced to replace `ALL` when it is used inside `CALCULATE`.
 - `KEEPFILTERS` does not remove an existing column or table filter for an individual `CALCULATE` expression, but adds new filter context (like Inner Join)
   + `KEEPFILTERS`: only show the value where the initial filter context is the same
-  + `CALCULATE` filter: always show the value regardless of any selected filter
+  + `CALCULATE` modifier: always show the value regardless of any selected filter
 
 ## 6. Table & Filter functions
 - Return columns or tables rather than scalar values, and can be used to either generate new data or serve as table inputs within DAX measures.
