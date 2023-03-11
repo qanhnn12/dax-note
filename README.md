@@ -34,7 +34,8 @@
   + Change filter propagation: `CROSSFILTER`
 - `CALCULATE` evaluates all kinds of filter arguments as a table
 - `REMOVEFILTERS` is an alias for `ALL`, but can only be used as a `CALCULATE` modifier (not as a table function). 
-  + Differences between `REMOVEFILTERS` and `ALL` [->Read this](https://www.sqlbi.com/articles/managing-all-functions-in-dax-all-allselected-allnoblankrow-allexcept)
+- Differences between `REMOVEFILTERS` and `ALL` [->Read this](https://www.sqlbi.com/articles/managing-all-functions-in-dax-all-allselected-allnoblankrow-allexcept)
+  + `REMOVEFILTERS` is just an alias of `ALL`, it works just the same. Basically, `ALL` returns a table including all rows, ignoring any filters that might have been applied. However, when `ALL` is used as a filter argument of `CALCULATE` or `CALCULATETABLE`, it behave totally differently: it removes filters from the table and does not return a table. To alleviate this confusing behavior of `ALL`, `REMOVEFILTERS` was introduced to replace `ALL` when it is used inside `CALCULATE`.
 - `KEEPFILTERS` does not remove an existing column or table filter for an individual `CALCULATE` expression, but adds new filter context (like Inner Join)
   + `KEEPFILTERS`: only show the value where the initial filter context is the same
   + `CALCULATE` filter: always show the value regardless of any selected filter
