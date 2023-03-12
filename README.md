@@ -48,6 +48,7 @@
 - DAX functions can accept either physical table or calculated / virtual table (with function like `FILTER`, `ALL`)
 - `FILTER` is both a table function and an iterator. It is often used to reduce the number of rows to scan
 - `ALL` is both a table filter and a `CALCULATE` modifier. It removes initial filter context and does not accept table expression (only physical table references)
+- When the input parameter is a *column name*, `VALUES` returns a one-column table that contains the distinct values from the specified column. Duplicate values are removed and only unique values are returned. A `BLANK` value can be added. When the input parameter is a *table name*, `VALUES` returns the rows from the specified table. Duplicate rows are preserved. A BLANK row can be added.
 - `VALUES` will always show the blank row but `DISTINCT` will not (use `VALUES` to check if your lookup tables have missing or duplicate values)
 - `SELECTEDVALUE` returns a value when there's only one value in a specified column, otherwise returns an (optional) alternate result. It can be interpretated as the combination of `IF`, `HASONEVALUE`, and `VALUES`.
   + `SELECTEDVALUE` can be used to retrieve a column from the same table [-> Read this](https://www.sqlbi.com/articles/using-the-selectedvalue-function-in-dax) 
