@@ -87,7 +87,7 @@
 
 ## 8. Relationship Functions
 - `RELATED`: Currently in the "many" side, want to specify data from the "one" side of the relationship
-- `RELATEDTABLE`: Currently in the one side, want to aggregate data from the "many" side of the relationship 
+- `RELATEDTABLE`: Currently in the "one" side, want to aggregate data from the "many" side of the relationship 
   + is commonly used with aggregators like `COUNTROWS`, `SUMX`, `AVERAGEX`, etc.
   + `COUNTROWS ( RELATEDTABLE ( 'Food Inventory' ) )`
   + `SUMX ( RELATEDTABBLE ( 'Food Inventory' ), [Quantity Sold] * [Retail Price] )`
