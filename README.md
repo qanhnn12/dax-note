@@ -93,7 +93,7 @@
   + `SUMX ( RELATEDTABBLE ( 'Food Inventory' ), [Quantity Sold] * [Retail Price] )`
   + `RELATEDTABLE` is shortcut for `CALCULATEDTABLE` (without logical expressions) and performs a context transition from row context to filter context, in order to return only the rows which satisfy the filter conditions.
 - `USERELATIONSHIP (ColumnName1 = Foreign key, ColumnName2 = Primary key)` activates an inactive relationship between two tables. This function should only be used in functions that accept a filter parameter (`CALCULATE`, `TOTALYTD`).
-- `CROSSFILTER(LeftColumn= "Many" side, RightColumn= "One" side, CrossFilterType)` works similarly as `USERELATIONSHIP`, but through another table. Instead of turning on bidirectional relationships, we should use `CROSSFILTER` for specific cases
+- `CROSSFILTER(LeftColumn= "Many" side, RightColumn= "One" side, CrossFilterType)` works similarly as `USERELATIONSHIP`, but through another table (modify the filter flow). Instead of turning on bidirectional relationships, we should use `CROSSFILTER` for specific cases
 - `TREATAS` allows us to create virtual, summarized versions of our tables to match the granularity that we need to form a valid relationship.
   + Notice that we should only use `TREATAS` when `USERELATIONSHIP` can't be used [-> Read this](https://www.mssqltips.com/sqlservertip/5482/how-to-use-the-treatas-function-in-dax)
   
