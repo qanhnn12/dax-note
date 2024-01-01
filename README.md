@@ -14,7 +14,7 @@
 - We use `CALCULATE` with `FILTER` as an argument when:
   + Aiming to show only values that are the same as the filter(s), other cells will remain `BLANK`
   + Comparing column value > column value; column value > measure; measure > measure
-  + The filter has the `OR` condition
+  + The filter has many `OR` conditions
   [-> Read this](https://community.powerbi.com/t5/Desktop/DAX-Calculate-function-with-and-without-FILTER/m-p/679222).
 - Why we should always use `FILTER` in `CALCULATE` function? [-> Read (1)](https://blog.enterprisedna.co/how-to-use-simple-filters-in-power-bi) and [(2)](https://stackoverflow.com/questions/72000696/why-calculate-is-not-modifying-filter-context-when-used-with-filter)
 - Use `KEEPFILTER` as an argument, instead of `FILTER` to preserve the existing filter [-> Read this](https://learn.microsoft.com/en-us/dax/best-practices/dax-avoid-avoid-filter-as-filter-argument)
