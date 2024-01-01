@@ -10,13 +10,15 @@
 - Variable evalation order: can't modify how a variable defined later in the `RETURN` statement (i.e. through `CALCULATE`)
   
 ## 3. Scalar functions
-- Difference between Tabular Functions and Scalar Functions in Power BI [-> Read (1)](https://radacad.com/power-bi-dax-back-to-basics-scalar-vs-tabular-functions), [(2)](https://stackoverflow.com/questions/72000696/why-calculate-is-not-modifying-filter-context-when-used-with-filter) and [(3)](https://learn.microsoft.com/en-us/dax/best-practices/dax-avoid-avoid-filter-as-filter-argument)
-- Difference between `CALCULATE` with `FILTER` and without `FILTER` [-> Read this](https://community.powerbi.com/t5/Desktop/DAX-Calculate-function-with-and-without-FILTER/m-p/679222). 
-- We use `CALCULATE` with `FILTER` when:
+- Difference between Tabular Functions and Scalar Functions in Power BI [-> Read this](https://radacad.com/power-bi-dax-back-to-basics-scalar-vs-tabular-functions)
+- Difference between `CALCULATE` with `FILTER` and without `FILTER`
+- We use `CALCULATE` with `FILTER` as an argument when:
   + Aiming to show only values that are the same as the filter(s), other cells will remain `BLANK`
   + Comparing column value > column value; column value > measure; measure > measure
-  + The filter has the `OR` condition 
-- Why we should always use `FILTER` in `CALCULATE` function? [-> Read this](https://blog.enterprisedna.co/how-to-use-simple-filters-in-power-bi)
+  + The filter has the `OR` condition
+  [-> Read this](https://community.powerbi.com/t5/Desktop/DAX-Calculate-function-with-and-without-FILTER/m-p/679222).
+- Why we should always use `FILTER` in `CALCULATE` function? [-> Read (1)](https://blog.enterprisedna.co/how-to-use-simple-filters-in-power-bi) and [(2)](https://stackoverflow.com/questions/72000696/why-calculate-is-not-modifying-filter-context-when-used-with-filter)
+- Use `KEEPFILTER` as an argument, instead of `FILTER` to preserve the existing filter [-> Read this](https://learn.microsoft.com/en-us/dax/best-practices/dax-avoid-avoid-filter-as-filter-argument)
 
 ## 4. Aggregation functions
 - For large datasets (1M+ rows), using `COUNTROWS` & `VALUES` may put less strain on the DAX engines than `DISTINCTCOUNT`
