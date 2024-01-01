@@ -11,7 +11,6 @@
   
 ## 3. Scalar functions
 - Difference between Tabular Functions and Scalar Functions in Power BI [-> Read this](https://radacad.com/power-bi-dax-back-to-basics-scalar-vs-tabular-functions)
-- Difference between `CALCULATE` with `FILTER` and without `FILTER`
 - We use `CALCULATE` with `FILTER` as an argument when:
   + Aiming to show only values that are the same as the filter(s), other cells will remain `BLANK`
   + Comparing column value > column value; column value > measure; measure > measure
