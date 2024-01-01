@@ -10,7 +10,7 @@
 - Variable evalation order: can't modify how a variable defined later in the `RETURN` statement (i.e. through `CALCULATE`)
   
 ## 3. Scalar functions
-- Difference between Tabular Functions and Scalar Functions in Power BI [-> Read this](https://radacad.com/power-bi-dax-back-to-basics-scalar-vs-tabular-functions)
+- Difference between Tabular Functions and Scalar Functions in Power BI [-> Read this](https://radacad.com/power-bi-dax-back-to-basics-scalar-vs-tabular-functions) [and this](https://stackoverflow.com/questions/72000696/why-calculate-is-not-modifying-filter-context-when-used-with-filter)
 - Difference between `CALCULATE` with `FILTER` and without `FILTER` [-> Read this](https://community.powerbi.com/t5/Desktop/DAX-Calculate-function-with-and-without-FILTER/m-p/679222). 
 - We use `CALCULATE` with `FILTER` when:
   + Aiming to show only values that are the same as the filter(s), other cells will remain `BLANK`
